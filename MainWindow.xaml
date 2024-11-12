@@ -1,0 +1,10 @@
+﻿<Window x:Class="Arduino_RGB_Strip_Controller.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        Title="Arduino NeoPixel Control" Height="300" Width="400">
+    <Grid>
+        <xctk:ColorPicker Name="colorPicker" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="40" />
+        <Button Name="btnSendColor" Content="Send Color" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,50" Width="120" Height="40"/>
+    </Grid>
+</Window>
