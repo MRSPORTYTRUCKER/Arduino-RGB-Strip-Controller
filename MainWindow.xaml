@@ -2,9 +2,25 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
-        Title="Arduino NeoPixel Control" Height="300" Width="400">
+        Background="#FF090910"
+        Title="Arduino RGB Strip Controller" 
+        Height="260" 
+        Width="250"
+        ResizeMode="NoResize">
+
     <Grid>
-        <xctk:ColorPicker Name="colorPicker" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="40" />
-        <Button Name="btnSendColor" Content="Send Color" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,50" Width="120" Height="40"/>
+        <!-- COM Port Selector ComboBox -->
+        <ComboBox Name="comPortComboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,25,0,0" Width="200" Background="#FF090910" Foreground="Black" >
+        </ComboBox>
+
+        <!-- RGB Color Picker -->
+        <xctk:ColorPicker Name="colorPicker" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,55,0,0" Width="200" Height="40" Background="#FF090910" HeaderBackground="#FF090910" TabBackground="#FF090910" Foreground="White" HeaderForeground="White" TabForeground="White" DropDownBackground="#FF090910" />
+
+        <!-- Send Color Button -->
+        <Button Name="btnSendColor" Content="Send Color" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="59,110,0,0" Width="120" Height="40" Background="#FF090910" Foreground="White"/>
+
+        <!-- Button to start Rainbow Wave -->
+        <Button Name="btnRainbowWave" Content="Rainbow Wave" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="59,160,0,0" Width="120" Height="40" Click="BtnRainbowWave_Click" Background="#FF090910" Foreground="White"/>
+
     </Grid>
 </Window>
